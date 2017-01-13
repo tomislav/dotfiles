@@ -5,7 +5,7 @@ source ~/.zsh/ohmy.zsh
 files=(
   options
   path
-  # completion
+  completion
   locale
   exports
   aliases
