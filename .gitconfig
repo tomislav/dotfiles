@@ -1,0 +1,7 @@
+[user]
+	name = Tomislav Filipcic
+	email = tf@7sols.com
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
