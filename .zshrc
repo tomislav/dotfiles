@@ -1,8 +1,6 @@
-# oh my zsh
-source ~/.zsh/ohmy.zsh
-
 # load files
 files=(
+  ohmy
   options
   path
   completion
