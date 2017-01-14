@@ -8,7 +8,9 @@ DEFAULT_USER=tomislav
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status time)
 POWERLEVEL9K_STATUS_VERBOSE=false
+POWERLEVEL9K_SHORTEN_DIR_LENGTH=3
+POWERLEVEL9K_SHORTEN_STRATEGY="truncate_middle"
 
-plugins=(git docker fasd pod warhol)
+plugins=(git brew docker fasd pod warhol zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
