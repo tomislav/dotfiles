@@ -2,7 +2,6 @@ export ZSH=/Users/tomislav/.oh-my-zsh
 
 ZSH_THEME="powerlevel9k/powerlevel9k"
 
-ENABLE_CORRECTION="true"
 DEFAULT_USER=tomislav
 
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs)

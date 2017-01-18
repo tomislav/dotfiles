@@ -9,7 +9,7 @@ hs.hotkey.bind(hyper, "g", launchOrCycleFocus("Tower"))
 hs.hotkey.bind(hyper, "d", launchOrCycleFocus("2Do"))
 -- hs.hotkey.bind(hyper, "s", launchOrCycleFocus("Bear"))
 hs.hotkey.bind(hyper, "x", launchOrCycleFocus("XCode"))
-hs.hotkey.bind(hyper, "a", launchOrCycleFocus("Atom"))
+hs.hotkey.bind(hyper, "s", launchOrCycleFocus("Sublime Text"))
 
 -- Reload Hammerspoon config
 hs.hotkey.bind(hyperShift, "r", function()

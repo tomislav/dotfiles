@@ -1,6 +1,6 @@
 require "tools"
 
-local devApps = { "Atom", "Xcode" }
+local devApps = { "Sublime Text", "Xcode" }
 
 function modifyKeyPress(tap_event)
   local flags = tap_event:getFlags()
@@ -49,7 +49,7 @@ function modifyKeyPress(tap_event)
   end
 end
 
-local key_tap = hs.eventtap.new(
+devkey_key_tap = hs.eventtap.new(
   {hs.eventtap.event.types.keyDown},
   modifyKeyPress
 )
@@ -58,18 +58,39 @@ local key_tap = hs.eventtap.new(
 function applicationWatcherCallback(appName, eventType, appObject)
   -- Switch keyboard layout if developement apps are active
   if (eventType == hs.application.watcher.activated) then
+    dbgf("devkeyboard: %s activated", appName)
     if (hs.fnutils.contains(devApps, appName)) then
-      if not key_tap:isEnabled() then
-        key_tap:start()
+      if not devkey_key_tap:isEnabled() then
+        dbg("devkeyboard: enabling keyboard")
+        devkey_key_tap:start()
       end
     else
-      if key_tap:isEnabled() then
-        key_tap:stop()
+      if devkey_key_tap:isEnabled() then
+        dbg("devkeyboard: disabling keyboard")
+        devkey_key_tap:stop()
       end
     end
   end
 end
 
+-- Define a callback function to be called when system wake/sleep events happen
+function caffeinateWatcherCallback(event)
+  -- Switch keyboard layout if developement apps are active
+  if (event == hs.caffeinate.watcher.systemDidWake) then
+    dbg("devkeyboard: resuming")
+    devKeyboardWatcher:start()
+  elseif (event == hs.caffeinate.watcher.systemWillSleep) then
+    devKeyboardWatcher:stop()
+    dbg("devkeyboard: stopped")
+  end
+end
+
 -- Create and start the application event watcher
-local watcher = hs.application.watcher.new(applicationWatcherCallback)
-watcher:start()
+devKeyboardWatcher = hs.application.watcher.new(applicationWatcherCallback)
+devKeyboardWatcher:start()
+
+-- Create a caffeinate watcher to start/stop the task on system wake/sleep events
+caffeinateWatcher = hs.caffeinate.watcher.new(caffeinateWatcherCallback)
+caffeinateWatcher:start()
+
+dbg("devkeyboard: started")

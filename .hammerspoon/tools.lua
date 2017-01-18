@@ -1,3 +1,22 @@
+---------------------------------------------------------
+-- Debugging
+---------------------------------------------------------
+
+dbg = function(...)
+  print(hs.inspect(...))
+end
+
+dbgf = function (...)
+  return dbg(string.format(...))
+end
+
+function tap (a)
+  dbg(a)
+  return a
+end
+
+--
+
 function flatten(t)
   local ret = {}
   for _, v in ipairs(t) do

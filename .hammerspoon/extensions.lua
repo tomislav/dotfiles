@@ -18,6 +18,7 @@ local grid = require "hs.grid"
 local geometry = require "hs.geometry"
 
 require("appwindowstates")
+require("tools")
 
 ---------------------------------------------------------
 -- Shared Globals
@@ -26,22 +27,6 @@ require("appwindowstates")
 -- used to save states for windows
 appStates = ApplicationWindowStates:new()
 
----------------------------------------------------------
--- Debugging
----------------------------------------------------------
-
-dbg = function(...)
-  print(hs.inspect(...))
-end
-
-dbgf = function (...)
-  return dbg(string.format(...))
-end
-
-function tap (a)
-  dbg(a)
-  return a
-end
 
 ---------------------------------------------------------
 -- Extension of native objects and modules
@@ -159,9 +144,9 @@ fullScreenCurrent = function()
       -- toggle fullscreen
 
   if window:isMaximized() then
-    dbg('NOT MAXIMIZED')
+    -- dbg('NOT MAXIMIZED')
     if appStates:lookup(window) then
-      dbg('FOUND STATE')
+      -- dbg('FOUND STATE')
       -- if we restore the entire state though, the state
       -- that could have been altered since the last state save
       -- (probably triggered by some window manipulation hotkey)
@@ -174,7 +159,7 @@ fullScreenCurrent = function()
       -- i.e. we're already a huge window, then make it smaller and save the state
     end
   else
-    dbg('MAXIMIZING')
+    -- dbg('MAXIMIZING')
     appStates:save()
     manipulateScreen(function(window, windowFrame, screen, screenFrame)
       window:setFrame(screenFrame)
@@ -290,7 +275,7 @@ function launchOrCycleFocus(applicationName)
     -- save the state of currently focused app
     appStates:save()
 
-    dbgf('last: %s, current: %s', lastToggledApplication, applicationName)
+    -- dbgf('last: %s, current: %s', lastToggledApplication, applicationName)
 
     if lastToggledApplication == applicationName then
       nextWindow = getNextWindow(applicationName, focusedWindow)
@@ -322,19 +307,19 @@ function launchOrCycleFocus(applicationName)
     end
 
     if not targetWindow then
-      dbgf('failed finding a window for application: %s', applicationName)
+      -- dbgf('failed finding a window for application: %s', applicationName)
       return nil
     end
 
     if appStates:lookup(targetWindow) then
-      dbgf('restoring state of: %s', targetWindow:application():title())
+      -- dbgf('restoring state of: %s', targetWindow:application():title())
       appStates:restore(targetWindow)
     else
       local windowFrame = targetWindow:frame()
-      hs.mouse.centerOnRect(windowFrame)
+      -- hs.mouse.centerOnRect(windowFrame)
     end
 
-    mouseHighlight()
+    -- mouseHighlight()
   end
 end
 
@@ -390,12 +375,12 @@ function captureKeys(numberOfKeystrokes, callback, keyValidator)
     local char = eventToCharacter(event)
 
     if isFunction(keyValidator) and not keyValidator(char) then
-      dbgf('received invalid char: %s', char)
+      -- dbgf('received invalid char: %s', char)
       captureKeystroke()
       return true
     end
 
-    dbgf('received char: %s', char)
+    -- dbgf('received char: %s', char)
     table.insert(capturedKeys, char)
 
     if #capturedKeys < numberOfKeystrokes then

@@ -78,7 +78,7 @@ function ApplicationWindowStates:restore(window, restoreFn)
   )
 
   if restoreState then
-    restoreMousePosition(restoreState)
+    -- restoreMousePosition(restoreState)
     restoreScreenFrame(restoreState)
   end
 end
