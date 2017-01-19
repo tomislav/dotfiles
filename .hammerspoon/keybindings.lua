@@ -19,9 +19,6 @@ hs.hotkey.bind(hyperShift, "r", function()
     hs.alert.show("Reloaded Hammerspoon configuration")
 end)
 
--- Needed to enable cycling of application windows
-
-
 -- Close notifications
 -- script = [[
 -- my closeNotif()

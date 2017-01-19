@@ -352,10 +352,24 @@
 			</dict>
 		</dict>
 	</dict>
+	<key>Default Arrangement Name</key>
+	<string>Visor split window</string>
 	<key>Default Bookmark Guid</key>
 	<string>52888748-2FF8-437D-9EC7-5C9C48852106</string>
-	<key>HideFromDockAndAppSwitcher</key>
+	<key>DimOnlyText</key>
 	<true/>
+	<key>HideFromDockAndAppSwitcher</key>
+	<false/>
+	<key>HideScrollbar</key>
+	<false/>
+	<key>HideTab</key>
+	<true/>
+	<key>HideTabNumber</key>
+	<false/>
+	<key>HotKeyBookmark</key>
+	<string>58AFD219-7E81-4F9A-9E03-5A444294F797</string>
+	<key>HotKeyTogglesWindow</key>
+	<false/>
 	<key>Hotkey</key>
 	<true/>
 	<key>HotkeyChar</key>
@@ -410,10 +424,12 @@
 		<key>TB Is Shown</key>
 		<integer>1</integer>
 	</dict>
+	<key>NSWindow Frame SessionsPreferences</key>
+	<string>269 139 606 456 0 0 1920 1080 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>0 367 1018 447 0 0 1440 900 </string>
+	<string>204 369 796 473 0 0 1920 1080 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 4 1440 896 0 0 1440 900 </string>
+	<string>0 4 1920 1076 0 0 1920 1080 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -1138,7 +1154,7 @@
 			<key>Visual Bell</key>
 			<true/>
 			<key>Window Type</key>
-			<integer>2</integer>
+			<integer>0</integer>
 			<key>Working Directory</key>
 			<string>/Users/tomislav</string>
 		</dict>
@@ -1155,6 +1171,10 @@
 	<false/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
 	<real>505995486.12292498</real>
+	<key>OpenArrangementAtStartup</key>
+	<false/>
+	<key>OpenNoWindowsAtStartup</key>
+	<true/>
 	<key>PointerActions</key>
 	<dict>
 		<key>Button,1,1,,</key>
@@ -1201,13 +1221,19 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-01-17T21:45:36Z</date>
+	<date>2017-01-19T17:26:54Z</date>
 	<key>SUSendProfileInfo</key>
+	<false/>
+	<key>ShowPaneTitles</key>
 	<false/>
 	<key>TabStyle</key>
 	<integer>0</integer>
 	<key>TabViewType</key>
 	<integer>0</integer>
+	<key>UseBorder</key>
+	<false/>
+	<key>Window Arrangements</key>
+	<dict/>
 	<key>WindowNumber</key>
 	<true/>
 	<key>WordCharacters</key>

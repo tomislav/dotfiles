@@ -211,8 +211,7 @@ local generateHtml = function()
               <hr />
             </header>
             <div class="content maincontent">]]..myMenuItems..[[</div>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.min.js"></script>
-<!--          <script src="http://localhost:7734/isotope.pkgd.min.js"></script> -->
+          <script src="http://localhost:7734/isotope.pkgd.min.js"></script> 
           <script type="text/javascript">
             var elem = document.querySelector('.content');
             var iso = new Isotope( elem, {
@@ -246,7 +245,7 @@ module.cs = hotkey.modal.new()
                 h = screenFrame.h - 100,
                 w = screenFrame.w - 100,
             }
-            module.myView = require("hs.webview").new(viewFrame, { developerExtrasEnabled = true })
+            module.myView = require("hs.webview").new(viewFrame, { developerExtrasEnabled = false })
               :windowStyle("utility")
               :closeOnEscape(true)
               :html(generateHtml())
@@ -254,6 +253,7 @@ module.cs = hotkey.modal.new()
               :windowTitle("CheatSheets")
               :level(require("hs.drawing").windowLevels.floating)
               :alpha(module.alpha or 1.0)
+              :transparent(true)
               :show()
               alert.closeAll() -- hide alert, if we finish fast enough
         end)
@@ -292,22 +292,6 @@ module.eventwatcher = eventtap.new({events.flagsChanged, events.keyDown, events.
     end
     return false ;
 end):start()
-
-module.remoteAccessWatcher = distributednotifications.new(function(n,o,i)
-    local vn = i and i.ViewerNames or nil
-    if not vn then
-        print("~~ com.apple.remotedesktop.viewerNames with unknown details: object = " .. tostring(o) .. ", info = " .. tostring(i))
-    else
-        if #vn > 0 and module.eventwatcher:isEnabled() then
-            notify.show("Remote Viewer Detected", "...disabling Cmd-Key Cheatsheat", "", "")
-            module.eventwatcher:stop()
-        elseif #vn == 0 and not module.eventwatcher:isEnabled() then
-            notify.show("Remote Viewer Left", "...re-enabling Cmd-Key Cheatsheat", "", "")
-            module.eventwatcher:start()
-        end
-        module.watchables.enabled = module.eventwatcher:isEnabled()
-    end
-end, "com.apple.remotedesktop.viewerNames"):start()
 
 module.toggle = function()
     if module.eventwatcher:isEnabled() then

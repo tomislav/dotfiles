@@ -1,6 +1,6 @@
 require "tools"
 
-local devApps = { "Sublime Text", "Xcode" }
+local devApps = { "Sublime Text", "Xcode", "iTerm2" }
 
 function modifyKeyPress(tap_event)
   local flags = tap_event:getFlags()
