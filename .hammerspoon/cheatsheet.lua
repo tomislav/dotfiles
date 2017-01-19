@@ -3,7 +3,7 @@
 -- Modified to more closely match my usage style
 
 -- I prefer a different type of key invocation/remove setup
-local alert    = require("hs.alert")
+-- local alert    = require("hs.alert")
 local hotkey   = require("hs.hotkey")
 local timer    = require("hs.timer")
 local eventtap = require("hs.eventtap")
@@ -21,7 +21,7 @@ module.watchables = watchables.new("cheatsheet")
 
 module.autoDismiss     = true
 module.showEmptyMenus  = false
-module.cmdKeyPressTime = 3.5
+module.cmdKeyPressTime = 3
 
 -- module.bgColor  = "#bbd" -- "#eee"
 module.bgColor  = "#111"
@@ -232,12 +232,12 @@ end
 
 module.cs = hotkey.modal.new()
     function module.cs:entered()
-        alert("Building Cheatsheet Display...")
+        -- alert("Building Cheatsheet Display...")
         -- Wrap in timer so alert has a chance to show when building the display is slow (I'm talking
         -- to you, Safari!).  Using a value of 0 seems to halt the alert animation in mid-sequence,
         -- so we use something almost as "quick" as 0.  Need to look at hs.timer someday and figure out
         -- why; perhaps 0 means "dispatch immediately, even before anything else in the queue"?
-        timer.doAfter(.1, function()
+        -- timer.doAfter(.1, function()
             local screenFrame = require("hs.screen").mainScreen():frame()
             local viewFrame = {
                 x = screenFrame.x + 50,
@@ -255,8 +255,8 @@ module.cs = hotkey.modal.new()
               :alpha(module.alpha or 1.0)
               :transparent(true)
               :show()
-              alert.closeAll() -- hide alert, if we finish fast enough
-        end)
+              -- alert.closeAll() -- hide alert, if we finish fast enough
+        -- end)
     end
     function module.cs:exited()
         module.myView:delete()

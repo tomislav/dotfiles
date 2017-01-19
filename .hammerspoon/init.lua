@@ -1,11 +1,12 @@
 hyper = {"ctrl", "alt", "cmd"}
-hyperShift = {"ctrl", "alt", "cmd", "shift"}
+hyperFn = {"ctrl", "alt", "cmd", "fn"}
 
 display_laptop = "Color LCD"
 display_monitor1 = "DELL P2415Q"
 
 hs.window.animationDuration = 0
 
+require 'hyper'
 require 'localassets'
 require 'position'
 require 'battery'
