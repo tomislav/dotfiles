@@ -6,7 +6,7 @@ display_monitor1 = "DELL P2415Q"
 
 hs.window.animationDuration = 0
 
-require "extensions"
+-- require "extensions"
 require 'position'
 require 'battery'
 require 'commandq'

@@ -1,3 +1,5 @@
+require "tools"
+
 hs.hotkey.bind(hyper, "q", launchOrCycleFocus("Safari"))
 hs.hotkey.bind(hyper, "c", launchOrCycleFocus("Calendar"))
 hs.hotkey.bind(hyper, "z", launchOrCycleFocus("Slack"))
@@ -7,7 +9,7 @@ hs.hotkey.bind(hyper, "i", launchOrCycleFocus("Spotify"))
 -- hs.hotkey.bind(hyper, "t", launchOrCycleFocus("iTerm"))
 hs.hotkey.bind(hyper, "g", launchOrCycleFocus("Tower"))
 hs.hotkey.bind(hyper, "d", launchOrCycleFocus("2Do"))
--- hs.hotkey.bind(hyper, "s", launchOrCycleFocus("Bear"))
+-- hs.hotkey.bind(hyper, "a", launchOrCycleFocus("Bear"))
 hs.hotkey.bind(hyper, "x", launchOrCycleFocus("XCode"))
 hs.hotkey.bind(hyper, "s", launchOrCycleFocus("Sublime Text"))
 
@@ -16,6 +18,9 @@ hs.hotkey.bind(hyperShift, "r", function()
     hs.reload()
     hs.alert.show("Reloaded Hammerspoon configuration")
 end)
+
+-- Needed to enable cycling of application windows
+
 
 -- Close notifications
 -- script = [[

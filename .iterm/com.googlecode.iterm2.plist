@@ -354,6 +354,8 @@
 	</dict>
 	<key>Default Bookmark Guid</key>
 	<string>52888748-2FF8-437D-9EC7-5C9C48852106</string>
+	<key>HideFromDockAndAppSwitcher</key>
+	<true/>
 	<key>Hotkey</key>
 	<true/>
 	<key>HotkeyChar</key>
@@ -409,9 +411,9 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>0 341 918 512 0 0 1440 900 </string>
+	<string>0 367 1018 447 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>455 4 970 896 0 0 1440 900 </string>
+	<string>0 4 1440 896 0 0 1440 900 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -1136,7 +1138,7 @@
 			<key>Visual Bell</key>
 			<true/>
 			<key>Window Type</key>
-			<integer>0</integer>
+			<integer>2</integer>
 			<key>Working Directory</key>
 			<string>/Users/tomislav</string>
 		</dict>

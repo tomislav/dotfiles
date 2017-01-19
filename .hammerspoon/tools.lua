@@ -1,6 +1,8 @@
----------------------------------------------------------
+local fnutils = require "hs.fnutils"
+local filter = fnutils.filter
+local indexOf = fnutils.indexOf
+
 -- Debugging
----------------------------------------------------------
 
 dbg = function(...)
   print(hs.inspect(...))
@@ -15,7 +17,82 @@ function tap (a)
   return a
 end
 
+-- Window stuff
+
+lastToggledApplication = ''
+
+function launchOrCycleFocus(applicationName)
+  return function()
+    local nextWindow = nil
+    local targetWindow = nil
+    local focusedWindow          = hs.window.focusedWindow()
+    local lastToggledApplication = focusedWindow and focusedWindow:application():title()
+
+    if not focusedWindow then return nil end
+
+    if lastToggledApplication == applicationName then
+      nextWindow = getNextWindow(applicationName, focusedWindow)
+      nextWindow:becomeMain()
+    else
+      hs.application.launchOrFocus(applicationName)
+    end
+
+    if nextWindow then -- won't be available when appState empty
+      targetWindow = nextWindow
+    else
+      targetWindow = hs.window.focusedWindow()
+    end
+
+    if not targetWindow then
+      -- dbgf('failed finding a window for application: %s', applicationName)
+      return nil
+    end
+  end
+end
+
+
+function getNextWindow(windows, window)
+  if type(windows) == "string" then
+    windows = hs.appfinder.appFromName(windows):allWindows()
+  end
+
+  windows = filter(windows, hs.window.isStandard)
+  windows = filter(windows, hs.window.isVisible)
+
+  -- need to sort by ID, since the default order of the window
+  -- isn't usable when we change the mainWindow
+  -- since mainWindow is always the first of the windows
+  -- hence we would always get the window succeeding mainWindow
+  table.sort(windows, function(w1, w2)
+    return w1:id() > w2:id()
+  end)
+
+  lastIndex = indexOf(windows, window)
+
+  return windows[getNextIndex(windows, lastIndex)]
+end
+
+---------------------------------------------------------
+-- COORDINATES, POINTS, RECTS, FRAMES, TABLES
+---------------------------------------------------------
+
+-- Fetch next index but cycle back when at the end
 --
+-- > getNextIndex({1,2,3}, 3)
+-- 1
+-- > getNextIndex({1}, 1)
+-- 1
+-- @return int
+function getNextIndex(table, currentIndex)
+  nextIndex = currentIndex + 1
+  if nextIndex > #table then
+    nextIndex = 1
+  end
+
+  return nextIndex
+end
+
+-- Misc
 
 function flatten(t)
   local ret = {}
