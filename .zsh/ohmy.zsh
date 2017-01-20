@@ -10,6 +10,6 @@ POWERLEVEL9K_STATUS_VERBOSE=false
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=3
 POWERLEVEL9K_SHORTEN_STRATEGY="truncate_middle"
 
-plugins=(git brew docker fasd pod warhol zsh-syntax-highlighting)
+plugins=(git brew docker fasd pod warhol zsh-syntax-highlighting ssh-agent)
 
 source $ZSH/oh-my-zsh.sh
