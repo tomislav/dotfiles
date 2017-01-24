@@ -431,9 +431,9 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>269 139 606 456 0 0 1920 1080 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>204 461 770 381 0 0 1920 1080 </string>
+	<string>204 469 796 473 0 0 1920 1080 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 4 970 1076 0 0 1920 1080 </string>
+	<string>0 4 1920 1076 0 0 1920 1080 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -1175,6 +1175,8 @@
 	<false/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
 	<real>505995486.12292498</real>
+	<key>OnlyWhenMoreTabs</key>
+	<false/>
 	<key>OpenArrangementAtStartup</key>
 	<false/>
 	<key>OpenNoWindowsAtStartup</key>
@@ -1225,7 +1227,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-01-19T17:26:54Z</date>
+	<date>2017-01-23T17:52:52Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowBookmarkName</key>

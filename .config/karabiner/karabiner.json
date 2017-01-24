@@ -26,7 +26,7 @@
                 "caps_lock": "f18"
             },
             "virtual_hid_keyboard": {
-                "caps_lock_delay_milliseconds": 0,
+                "caps_lock_delay_milliseconds": 250,
                 "keyboard_type": "iso"
             }
         }

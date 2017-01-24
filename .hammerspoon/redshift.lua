@@ -1,3 +1,5 @@
+require 'tools'
+
 local Redshift = {
   active = hs.settings.get('Redshift.active'),
   enabled = false,
@@ -77,13 +79,21 @@ function Redshift:update()
   self:loadSunrise()
 end
 
+function caffeinateRedshiftWatcherCallback(event)
+  if (event == hs.caffeinate.watcher.systemDidWake) then
+    Redshift:update()
+  end
+end
+
 hs.timer.doAfter(3, function()
   Redshift:update()
-  hs.timer.doAt('12:00', '1d', function() Redshift:update() end)
+
+  -- update sunrise/sunset times on system wake up
+  caffeinateRedshiftWatcher = hs.caffeinate.watcher.new(caffeinateRedshiftWatcherCallback)
+  caffeinateRedshiftWatcher:start()
 
   hs.hotkey.bind(hyper, 'r', function()
     Redshift:toggle()
-    hs.timer.doAfter(hs.timer.hours(1), function () Redshift:on() end)
   end)
 
   if hs.settings.get('Redshift.active') then Redshift:enable() else Redshift:disable() end
