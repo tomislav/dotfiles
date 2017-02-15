@@ -1,7 +1,8 @@
 {
     "global": {
         "check_for_updates_on_startup": true,
-        "show_in_menu_bar": false
+        "show_in_menu_bar": false,
+        "show_profile_name_in_menu_bar": false
     },
     "profiles": [
         {
@@ -23,7 +24,9 @@
             "name": "Default profile",
             "selected": true,
             "simple_modifications": {
-                "caps_lock": "f18"
+                "caps_lock": "f18",
+                "grave_accent_and_tilde": "non_us_backslash",
+                "non_us_backslash": "grave_accent_and_tilde"
             },
             "virtual_hid_keyboard": {
                 "caps_lock_delay_milliseconds": 250,

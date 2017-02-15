@@ -1,6 +1,6 @@
 # load files
 files=(
-  ohmy
+  antigen
   options
   path
   completion
