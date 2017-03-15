@@ -8,7 +8,8 @@ antigen bundle brew
 antigen bundle docker
 antigen bundle fasd
 antigen bundle pod
-antigen bundle ssh-agent
+antigen bundle osx
+# antigen bundle ssh-agent
 
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-completions
