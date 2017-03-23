@@ -7,14 +7,12 @@ display_monitor1 = "DELL P2415Q"
 
 hs.window.animationDuration = 0
 
-require 'hyper'
 require 'localassets'
-require 'position'
+require 'window'
 require 'battery'
 require 'commandq'
 require 'cheatsheet'
 require 'spaces'
 require 'devkeyboard'
 require 'keybindings'
--- require 'redshift'
 require 'itunes'

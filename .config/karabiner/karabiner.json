@@ -1,6 +1,6 @@
 {
     "global": {
-        "check_for_updates_on_startup": true,
+        "check_for_updates_on_startup": false,
         "show_in_menu_bar": false,
         "show_profile_name_in_menu_bar": false
     },
@@ -22,15 +22,23 @@
                 "f9": "fastforward"
             },
             "name": "Default profile",
+            "one_to_many_mappings": {},
             "selected": true,
             "simple_modifications": {
-                "caps_lock": "f18",
                 "grave_accent_and_tilde": "non_us_backslash",
                 "non_us_backslash": "grave_accent_and_tilde"
             },
+            "standalone_keys": {},
             "virtual_hid_keyboard": {
                 "caps_lock_delay_milliseconds": 250,
-                "keyboard_type": "iso"
+                "keyboard_type": "iso",
+                "standalone_keys_delay_milliseconds": 200
+            },
+            "one_to_many_mappings": {
+                "caps_lock": ["left_control", "left_option", "left_command"]
+            },
+            "standalone_keys": {
+                "caps_lock": "escape"
             }
         }
     ]
