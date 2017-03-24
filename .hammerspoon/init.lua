@@ -1,6 +1,7 @@
 hyper = {"ctrl", "alt", "cmd"}
 hyperFn = {"ctrl", "alt", "cmd", "fn"}
 hyperShift = {"ctrl", "alt", "cmd", "shift"}
+hyperShiftFn = {"ctrl", "alt", "cmd", "shift", "fn"}
 
 display_laptop = "Color LCD"
 display_monitor1 = "DELL P2415Q"

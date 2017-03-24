@@ -108,7 +108,7 @@ local spacesEventTap = hs.eventtap.new({ hs.eventtap.event.types.keyDown }, func
   return false
 end):start()
 
-hs.hotkey.bind(hyperShift, "+", function()
+hs.hotkey.bind(hyperShift, "/", function()
   -- this is to bind the spacesEventTap variable to a long-lived function in
   -- order to prevent GC from doing their evil business
   hs.alert.show("Fast space switching enabled: " .. tostring(spacesEventTap:isEnabled()))

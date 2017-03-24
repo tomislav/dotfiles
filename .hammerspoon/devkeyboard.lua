@@ -7,6 +7,12 @@ function modifyKeyPress(tap_event)
   local character = hs.keycodes.map[tap_event:getKeyCode()]
   local event = nil
 
+  -- for k, v in pairs( flags ) do
+  --    print(k, v)
+  -- end
+
+  if (flags.cmd and flags.ctrl and flags.alt) then return false end
+
   if (character == "š") then
     if (flags.shift) then
       event = hs.eventtap.event.newKeyEvent({"alt", "shift"}, "š", true)
