@@ -19,6 +19,19 @@ end
 
 -- Window stuff
 
+function launchOrToggle(applicationName)
+  return function()
+    local app = hs.appfinder.appFromName(applicationName)
+    if not app or app:isHidden() then
+        hs.application.launchOrFocus(applicationName)
+    elseif hs.application.frontmostApplication() ~= app then
+        app:activate()
+    else
+        app:hide()
+    end
+  end
+end
+
 lastToggledApplication = ''
 
 function launchOrCycleFocus(applicationName)
