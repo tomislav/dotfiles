@@ -62,7 +62,7 @@ end
 
 -- Toggle between different window sizes and snap them to sides
 for key, frame in pairs(windowFrames) do
-	hs.hotkey.bind(hyper, key, frameWindow(frame, key))
+	hs.hotkey.bind(hyperShift, key, frameWindow(frame, key))
 end
 
 -- Maximize window or restore previous size

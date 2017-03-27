@@ -10,6 +10,7 @@ hs.window.animationDuration = 0
 
 require 'localassets'
 require 'window'
+require 'focus'
 require 'battery'
 require 'commandq'
 require 'cheatsheet'
