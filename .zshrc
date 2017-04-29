@@ -9,13 +9,15 @@ export ZPLUG_HOME=/usr/local/opt/zplug
 source $ZPLUG_HOME/init.zsh
 
 zplug "plugins/git", from:oh-my-zsh
-zplug "plugins/fasd", from:oh-my-zsh
 zplug "plugins/command-not-found", from:oh-my-zsh
 zplug "plugins/brew", from:oh-my-zsh
 zplug "plugins/docker", from:oh-my-zsh
 zplug "plugins/pod", from:oh-my-zsh
 zplug "plugins/osx", from:oh-my-zsh
 zplug "plugins/rbenv", from:oh-my-zsh
+
+zplug "changyuheng/fz", defer:1
+zplug "rupa/z", use:z.sh
 
 zplug "zsh-users/zsh-completions", defer:0
 zplug "zsh-users/zsh-autosuggestions", defer:2
@@ -24,6 +26,7 @@ zplug "zsh-users/zsh-history-substring-search", defer:3
 
 zplug "unixorn/warhol.plugin.zsh", from:github
 zplug "peterhurford/git-aliases.zsh", from:github
+zplug "djui/alias-tips", from:github
 
 zplug "bhilburn/powerlevel9k", use:powerlevel9k.zsh-theme
 
@@ -39,3 +42,5 @@ fi
 
 # Then, source plugins and add commands to $PATH
 zplug load
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"

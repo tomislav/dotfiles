@@ -1,3 +1,6 @@
+# change iTerm2 Profile
+it2profile() { echo -e "\033]50;SetProfile=$1\a" }
+
 # sudo previous command
 sudothat() {
   echo -e "$(tput setaf 1)sudo:$(tput sgr0) $(fc -ln -1)"
