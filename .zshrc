@@ -15,6 +15,7 @@ zplug "plugins/docker", from:oh-my-zsh
 zplug "plugins/pod", from:oh-my-zsh
 zplug "plugins/osx", from:oh-my-zsh
 zplug "plugins/rbenv", from:oh-my-zsh
+zplug "plugins/bundler", from:oh-my-zsh
 
 zplug "changyuheng/fz", defer:1
 zplug "rupa/z", use:z.sh
@@ -42,5 +43,3 @@ fi
 
 # Then, source plugins and add commands to $PATH
 zplug load
-
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
