@@ -16,6 +16,7 @@ zplug "plugins/pod", from:oh-my-zsh
 zplug "plugins/osx", from:oh-my-zsh
 zplug "plugins/rbenv", from:oh-my-zsh
 zplug "plugins/bundler", from:oh-my-zsh
+zplug "plugins/xcode", from:oh-my-zsh
 
 zplug "changyuheng/fz", defer:1
 zplug "rupa/z", use:z.sh
@@ -32,6 +33,7 @@ zplug "djui/alias-tips", from:github
 zplug "bhilburn/powerlevel9k", use:powerlevel9k.zsh-theme
 
 zplug "~/.zsh", from:local
+zplug "~/.fastlane/completions/", from:local, use:"*.zsh"
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then

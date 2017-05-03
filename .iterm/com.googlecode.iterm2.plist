@@ -651,7 +651,7 @@
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>204 651 918 381 0 0 1920 1080 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 4 970 1076 0 0 1920 1080 </string>
+	<string>0 5 1920 1075 0 0 1920 1080 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>247 4 970 1076 0 0 1920 1080 </string>
 	<key>New Bookmarks</key>
@@ -1670,13 +1670,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.43853506445884705</real>
+				<real>0.74901962280000001</real>
 				<key>Color Space</key>
 				<string>Calibrated</string>
 				<key>Green Component</key>
-				<real>0.38988721370697021</real>
+				<real>0.69803923369999998</real>
 				<key>Red Component</key>
-				<real>0.36066854000091553</real>
+				<real>0.67058825489999996</real>
 			</dict>
 			<key>Bound Hosts</key>
 			<array/>
@@ -2347,7 +2347,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-04-29T05:43:53Z</date>
+	<date>2017-04-30T19:40:40Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowBookmarkName</key>
