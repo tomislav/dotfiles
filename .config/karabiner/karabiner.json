@@ -1,11 +1,45 @@
 {
     "global": {
-        "check_for_updates_on_startup": false,
-        "show_in_menu_bar": false,
+        "check_for_updates_on_startup": true,
+        "show_in_menu_bar": true,
         "show_profile_name_in_menu_bar": false
     },
     "profiles": [
         {
+            "complex_modifications": {
+                "rules": [
+                    {
+                        "manipulators": [
+                            {
+                                "description": "Change caps_lock to command+control+option.",
+                                "from": {
+                                    "key_code": "caps_lock",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_command",
+                                        "modifiers": [
+                                            "left_control",
+                                            "left_option"
+                                        ]
+                                    }
+                                ],
+                                "to_if_alone": [
+                                    {
+                                        "key_code": "escape"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    }
+                ]
+            },
             "devices": [],
             "fn_function_keys": {
                 "f1": "display_brightness_decrement",
@@ -21,24 +55,15 @@
                 "f8": "play_or_pause",
                 "f9": "fastforward"
             },
-            "name": "Default profile",
-            "one_to_many_mappings": {},
+            "name": "Profile",
             "selected": true,
             "simple_modifications": {
                 "grave_accent_and_tilde": "non_us_backslash",
                 "non_us_backslash": "grave_accent_and_tilde"
             },
-            "standalone_keys": {},
             "virtual_hid_keyboard": {
-                "caps_lock_delay_milliseconds": 250,
-                "keyboard_type": "iso",
-                "standalone_keys_delay_milliseconds": 200
-            },
-            "one_to_many_mappings": {
-                "caps_lock": ["left_control", "left_option", "left_command"]
-            },
-            "standalone_keys": {
-                "caps_lock": "escape"
+                "caps_lock_delay_milliseconds": 0,
+                "keyboard_type": "iso"
             }
         }
     ]
