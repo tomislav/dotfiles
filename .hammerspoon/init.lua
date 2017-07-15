@@ -4,7 +4,7 @@ hyperShift = {"ctrl", "alt", "cmd", "shift"}
 hyperShiftFn = {"ctrl", "alt", "cmd", "shift", "fn"}
 
 display_laptop = "Color LCD"
-display_monitor1 = "DELL P2415Q"
+display_monitor1 = "LG Ultrafine 5K"
 
 hs.window.animationDuration = 0
 
@@ -15,6 +15,5 @@ require 'battery'
 require 'commandq'
 require 'cheatsheet'
 require 'spaces'
-require 'devkeyboard'
 require 'keybindings'
 require 'itunes'
