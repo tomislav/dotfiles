@@ -44,157 +44,167 @@
                     {
                         "description": "Development keyboard",
                         "manipulators": [
-                          {
-                              "from": {
-                                  "key_code": "open_bracket",
-                                  "modifiers": {
-                                      "optional": [
-                                          "any"
-                                      ]
-                                  }
-                              },
-                              "to": [
-                                  {
-                                      "key_code": "open_bracket",
-                                      "modifiers": [
-                                          "left_option"
-                                      ]
-                                  }
-                              ],
-                              "type": "basic",
-                              "conditions": [
-                                  {
-                                      "type": "frontmost_application_if",
-                                      "bundle_identifiers": [
-                                        "^com\\.googlecode\\.iterm2$",
-                                        "^com\\.github\\.atom$",
-                                        "^com\\.apple\\.dt\\.Xcode$"
-                                      ]
-                                  }
-                              ]
-                          },
-                          {
-                              "from": {
-                                  "key_code": "close_bracket",
-                                  "modifiers": {
-                                      "optional": [
-                                          "any"
-                                      ]
-                                  }
-                              },
-                              "to": [
-                                  {
-                                      "key_code": "close_bracket",
-                                      "modifiers": [
-                                          "left_option"
-                                      ]
-                                  }
-                              ],
-                              "type": "basic",
-                              "conditions": [
-                                  {
-                                      "type": "frontmost_application_if",
-                                      "bundle_identifiers": [
-                                        "^com\\.googlecode\\.iterm2$",
-                                        "^com\\.github\\.atom$",
-                                        "^com\\.apple\\.dt\\.Xcode$"
-                                      ]
-                                  }
-                              ]
-                          },
-                          {
-                              "from": {
-                                  "key_code": "backslash",
-                                  "modifiers": {
-                                      "optional": [
-                                          "any"
-                                      ]
-                                  }
-                              },
-                              "to": [
-                                  {
-                                      "key_code": "backslash",
-                                      "modifiers": [
-                                          "left_option"
-                                      ]
-                                  }
-                              ],
-                              "type": "basic",
-                              "conditions": [
-                                  {
-                                      "type": "frontmost_application_if",
-                                      "bundle_identifiers": [
-                                        "^com\\.googlecode\\.iterm2$",
-                                        "^com\\.github\\.atom$",
-                                        "^com\\.apple\\.dt\\.Xcode$"
-                                      ]
-                                  }
-                              ]
-                          },
-                          {
-                              "from": {
-                                  "key_code": "semicolon",
-                                  "modifiers": {
-                                      "optional": [
-                                          "any"
-                                      ]
-                                  }
-                              },
-                              "to": [
-                                  {
-                                      "key_code": "semicolon",
-                                      "modifiers": [
-                                          "left_option"
-                                      ]
-                                  }
-                              ],
-                              "type": "basic",
-                              "conditions": [
-                                  {
-                                      "type": "frontmost_application_if",
-                                      "bundle_identifiers": [
-                                        "^com\\.googlecode\\.iterm2$",
-                                        "^com\\.github\\.atom$",
-                                        "^com\\.apple\\.dt\\.Xcode$"
-                                      ]
-                                  }
-                              ]
-                          },
-                          {
-                              "from": {
-                                  "key_code": "quote",
-                                  "modifiers": {
-                                      "optional": [
-                                          "any"
-                                      ]
-                                  }
-                              },
-                              "to": [
-                                  {
-                                      "key_code": "quote",
-                                      "modifiers": [
-                                          "left_option"
-                                      ]
-                                  }
-                              ],
-                              "type": "basic",
-                              "conditions": [
-                                  {
-                                      "type": "frontmost_application_if",
-                                      "bundle_identifiers": [
-                                        "^com\\.googlecode\\.iterm2$",
-                                        "^com\\.github\\.atom$",
-                                        "^com\\.apple\\.dt\\.Xcode$"
-                                      ]
-                                  }
-                              ]
-                          }
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.googlecode\\.iterm2$",
+                                            "^com\\.github\\.atom$",
+                                            "^com\\.apple\\.dt\\.Xcode$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "open_bracket",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "open_bracket",
+                                        "modifiers": [
+                                            "left_option"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.googlecode\\.iterm2$",
+                                            "^com\\.github\\.atom$",
+                                            "^com\\.apple\\.dt\\.Xcode$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "close_bracket",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "close_bracket",
+                                        "modifiers": [
+                                            "left_option"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.googlecode\\.iterm2$",
+                                            "^com\\.github\\.atom$",
+                                            "^com\\.apple\\.dt\\.Xcode$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "backslash",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "backslash",
+                                        "modifiers": [
+                                            "left_option"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.googlecode\\.iterm2$",
+                                            "^com\\.github\\.atom$",
+                                            "^com\\.apple\\.dt\\.Xcode$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "semicolon",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "semicolon",
+                                        "modifiers": [
+                                            "left_option"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.googlecode\\.iterm2$",
+                                            "^com\\.github\\.atom$",
+                                            "^com\\.apple\\.dt\\.Xcode$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "quote",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "quote",
+                                        "modifiers": [
+                                            "left_option"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
                         ]
-                      },
-                      {
+                    },
+                    {
                         "description": "Exchange numbers and symbols (1234567890 and !@#$%^&*())",
                         "manipulators": [
                             {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.googlecode\\.iterm2$",
+                                            "^com\\.github\\.atom$",
+                                            "^com\\.apple\\.dt\\.Xcode$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "1",
                                     "modifiers": {
@@ -209,19 +219,19 @@
                                         ]
                                     }
                                 ],
-                                "type": "basic",
-                              "conditions": [
-                                  {
-                                      "type": "frontmost_application_if",
-                                      "bundle_identifiers": [
-                                        "^com\\.googlecode\\.iterm2$",
-                                        "^com\\.github\\.atom$",
-                                        "^com\\.apple\\.dt\\.Xcode$"
-                                      ]
-                                  }
-                              ]
+                                "type": "basic"
                             },
                             {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.googlecode\\.iterm2$",
+                                            "^com\\.github\\.atom$",
+                                            "^com\\.apple\\.dt\\.Xcode$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "2",
                                     "modifiers": {
@@ -236,19 +246,19 @@
                                         ]
                                     }
                                 ],
-                                "type": "basic",
-                              "conditions": [
-                                  {
-                                      "type": "frontmost_application_if",
-                                      "bundle_identifiers": [
-                                        "^com\\.googlecode\\.iterm2$",
-                                        "^com\\.github\\.atom$",
-                                        "^com\\.apple\\.dt\\.Xcode$"
-                                      ]
-                                  }
-                              ]
+                                "type": "basic"
                             },
                             {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.googlecode\\.iterm2$",
+                                            "^com\\.github\\.atom$",
+                                            "^com\\.apple\\.dt\\.Xcode$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "3",
                                     "modifiers": {
@@ -263,19 +273,19 @@
                                         ]
                                     }
                                 ],
-                                "type": "basic",
-                              "conditions": [
-                                  {
-                                      "type": "frontmost_application_if",
-                                      "bundle_identifiers": [
-                                        "^com\\.googlecode\\.iterm2$",
-                                        "^com\\.github\\.atom$",
-                                        "^com\\.apple\\.dt\\.Xcode$"
-                                      ]
-                                  }
-                              ]
+                                "type": "basic"
                             },
                             {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.googlecode\\.iterm2$",
+                                            "^com\\.github\\.atom$",
+                                            "^com\\.apple\\.dt\\.Xcode$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "4",
                                     "modifiers": {
@@ -290,19 +300,19 @@
                                         ]
                                     }
                                 ],
-                                "type": "basic",
-                              "conditions": [
-                                  {
-                                      "type": "frontmost_application_if",
-                                      "bundle_identifiers": [
-                                        "^com\\.googlecode\\.iterm2$",
-                                        "^com\\.github\\.atom$",
-                                        "^com\\.apple\\.dt\\.Xcode$"
-                                      ]
-                                  }
-                              ]
+                                "type": "basic"
                             },
                             {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.googlecode\\.iterm2$",
+                                            "^com\\.github\\.atom$",
+                                            "^com\\.apple\\.dt\\.Xcode$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "5",
                                     "modifiers": {
@@ -317,19 +327,19 @@
                                         ]
                                     }
                                 ],
-                                "type": "basic",
-                              "conditions": [
-                                  {
-                                      "type": "frontmost_application_if",
-                                      "bundle_identifiers": [
-                                        "^com\\.googlecode\\.iterm2$",
-                                        "^com\\.github\\.atom$",
-                                        "^com\\.apple\\.dt\\.Xcode$"
-                                      ]
-                                  }
-                              ]
+                                "type": "basic"
                             },
                             {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.googlecode\\.iterm2$",
+                                            "^com\\.github\\.atom$",
+                                            "^com\\.apple\\.dt\\.Xcode$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "6",
                                     "modifiers": {
@@ -344,19 +354,19 @@
                                         ]
                                     }
                                 ],
-                                "type": "basic",
-                              "conditions": [
-                                  {
-                                      "type": "frontmost_application_if",
-                                      "bundle_identifiers": [
-                                        "^com\\.googlecode\\.iterm2$",
-                                        "^com\\.github\\.atom$",
-                                        "^com\\.apple\\.dt\\.Xcode$"
-                                      ]
-                                  }
-                              ]
+                                "type": "basic"
                             },
                             {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.googlecode\\.iterm2$",
+                                            "^com\\.github\\.atom$",
+                                            "^com\\.apple\\.dt\\.Xcode$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "7",
                                     "modifiers": {
@@ -371,19 +381,19 @@
                                         ]
                                     }
                                 ],
-                                "type": "basic",
-                              "conditions": [
-                                  {
-                                      "type": "frontmost_application_if",
-                                      "bundle_identifiers": [
-                                        "^com\\.googlecode\\.iterm2$",
-                                        "^com\\.github\\.atom$",
-                                        "^com\\.apple\\.dt\\.Xcode$"
-                                      ]
-                                  }
-                              ]
+                                "type": "basic"
                             },
                             {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.googlecode\\.iterm2$",
+                                            "^com\\.github\\.atom$",
+                                            "^com\\.apple\\.dt\\.Xcode$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "8",
                                     "modifiers": {
@@ -398,19 +408,19 @@
                                         ]
                                     }
                                 ],
-                                "type": "basic",
-                              "conditions": [
-                                  {
-                                      "type": "frontmost_application_if",
-                                      "bundle_identifiers": [
-                                        "^com\\.googlecode\\.iterm2$",
-                                        "^com\\.github\\.atom$",
-                                        "^com\\.apple\\.dt\\.Xcode$"
-                                      ]
-                                  }
-                              ]
+                                "type": "basic"
                             },
                             {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.googlecode\\.iterm2$",
+                                            "^com\\.github\\.atom$",
+                                            "^com\\.apple\\.dt\\.Xcode$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "9",
                                     "modifiers": {
@@ -425,19 +435,19 @@
                                         ]
                                     }
                                 ],
-                                "type": "basic",
-                              "conditions": [
-                                  {
-                                      "type": "frontmost_application_if",
-                                      "bundle_identifiers": [
-                                        "^com\\.googlecode\\.iterm2$",
-                                        "^com\\.github\\.atom$",
-                                        "^com\\.apple\\.dt\\.Xcode$"
-                                      ]
-                                  }
-                              ]
+                                "type": "basic"
                             },
                             {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.googlecode\\.iterm2$",
+                                            "^com\\.github\\.atom$",
+                                            "^com\\.apple\\.dt\\.Xcode$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "0",
                                     "modifiers": {
@@ -452,19 +462,19 @@
                                         ]
                                     }
                                 ],
-                                "type": "basic",
-                              "conditions": [
-                                  {
-                                      "type": "frontmost_application_if",
-                                      "bundle_identifiers": [
-                                        "^com\\.googlecode\\.iterm2$",
-                                        "^com\\.github\\.atom$",
-                                        "^com\\.apple\\.dt\\.Xcode$"
-                                      ]
-                                  }
-                              ]
+                                "type": "basic"
                             },
                             {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.googlecode\\.iterm2$",
+                                            "^com\\.github\\.atom$",
+                                            "^com\\.apple\\.dt\\.Xcode$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "1",
                                     "modifiers": {
@@ -481,19 +491,19 @@
                                         "key_code": "1"
                                     }
                                 ],
-                                "type": "basic",
-                              "conditions": [
-                                  {
-                                      "type": "frontmost_application_if",
-                                      "bundle_identifiers": [
-                                        "^com\\.googlecode\\.iterm2$",
-                                        "^com\\.github\\.atom$",
-                                        "^com\\.apple\\.dt\\.Xcode$"
-                                      ]
-                                  }
-                              ]
+                                "type": "basic"
                             },
                             {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.googlecode\\.iterm2$",
+                                            "^com\\.github\\.atom$",
+                                            "^com\\.apple\\.dt\\.Xcode$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "2",
                                     "modifiers": {
@@ -510,19 +520,19 @@
                                         "key_code": "2"
                                     }
                                 ],
-                                "type": "basic",
-                              "conditions": [
-                                  {
-                                      "type": "frontmost_application_if",
-                                      "bundle_identifiers": [
-                                        "^com\\.googlecode\\.iterm2$",
-                                        "^com\\.github\\.atom$",
-                                        "^com\\.apple\\.dt\\.Xcode$"
-                                      ]
-                                  }
-                              ]
+                                "type": "basic"
                             },
                             {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.googlecode\\.iterm2$",
+                                            "^com\\.github\\.atom$",
+                                            "^com\\.apple\\.dt\\.Xcode$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "3",
                                     "modifiers": {
@@ -539,19 +549,19 @@
                                         "key_code": "3"
                                     }
                                 ],
-                                "type": "basic",
-                              "conditions": [
-                                  {
-                                      "type": "frontmost_application_if",
-                                      "bundle_identifiers": [
-                                        "^com\\.googlecode\\.iterm2$",
-                                        "^com\\.github\\.atom$",
-                                        "^com\\.apple\\.dt\\.Xcode$"
-                                      ]
-                                  }
-                              ]
+                                "type": "basic"
                             },
                             {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.googlecode\\.iterm2$",
+                                            "^com\\.github\\.atom$",
+                                            "^com\\.apple\\.dt\\.Xcode$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "4",
                                     "modifiers": {
@@ -568,19 +578,19 @@
                                         "key_code": "4"
                                     }
                                 ],
-                                "type": "basic",
-                              "conditions": [
-                                  {
-                                      "type": "frontmost_application_if",
-                                      "bundle_identifiers": [
-                                        "^com\\.googlecode\\.iterm2$",
-                                        "^com\\.github\\.atom$",
-                                        "^com\\.apple\\.dt\\.Xcode$"
-                                      ]
-                                  }
-                              ]
+                                "type": "basic"
                             },
                             {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.googlecode\\.iterm2$",
+                                            "^com\\.github\\.atom$",
+                                            "^com\\.apple\\.dt\\.Xcode$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "5",
                                     "modifiers": {
@@ -597,19 +607,19 @@
                                         "key_code": "5"
                                     }
                                 ],
-                                "type": "basic",
-                              "conditions": [
-                                  {
-                                      "type": "frontmost_application_if",
-                                      "bundle_identifiers": [
-                                        "^com\\.googlecode\\.iterm2$",
-                                        "^com\\.github\\.atom$",
-                                        "^com\\.apple\\.dt\\.Xcode$"
-                                      ]
-                                  }
-                              ]
+                                "type": "basic"
                             },
                             {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.googlecode\\.iterm2$",
+                                            "^com\\.github\\.atom$",
+                                            "^com\\.apple\\.dt\\.Xcode$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "6",
                                     "modifiers": {
@@ -626,19 +636,19 @@
                                         "key_code": "6"
                                     }
                                 ],
-                                "type": "basic",
-                              "conditions": [
-                                  {
-                                      "type": "frontmost_application_if",
-                                      "bundle_identifiers": [
-                                        "^com\\.googlecode\\.iterm2$",
-                                        "^com\\.github\\.atom$",
-                                        "^com\\.apple\\.dt\\.Xcode$"
-                                      ]
-                                  }
-                              ]
+                                "type": "basic"
                             },
                             {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.googlecode\\.iterm2$",
+                                            "^com\\.github\\.atom$",
+                                            "^com\\.apple\\.dt\\.Xcode$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "7",
                                     "modifiers": {
@@ -655,19 +665,19 @@
                                         "key_code": "7"
                                     }
                                 ],
-                                "type": "basic",
-                              "conditions": [
-                                  {
-                                      "type": "frontmost_application_if",
-                                      "bundle_identifiers": [
-                                        "^com\\.googlecode\\.iterm2$",
-                                        "^com\\.github\\.atom$",
-                                        "^com\\.apple\\.dt\\.Xcode$"
-                                      ]
-                                  }
-                              ]
+                                "type": "basic"
                             },
                             {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.googlecode\\.iterm2$",
+                                            "^com\\.github\\.atom$",
+                                            "^com\\.apple\\.dt\\.Xcode$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "8",
                                     "modifiers": {
@@ -684,19 +694,19 @@
                                         "key_code": "8"
                                     }
                                 ],
-                                "type": "basic",
-                              "conditions": [
-                                  {
-                                      "type": "frontmost_application_if",
-                                      "bundle_identifiers": [
-                                        "^com\\.googlecode\\.iterm2$",
-                                        "^com\\.github\\.atom$",
-                                        "^com\\.apple\\.dt\\.Xcode$"
-                                      ]
-                                  }
-                              ]
+                                "type": "basic"
                             },
                             {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.googlecode\\.iterm2$",
+                                            "^com\\.github\\.atom$",
+                                            "^com\\.apple\\.dt\\.Xcode$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "9",
                                     "modifiers": {
@@ -713,19 +723,19 @@
                                         "key_code": "9"
                                     }
                                 ],
-                                "type": "basic",
-                              "conditions": [
-                                  {
-                                      "type": "frontmost_application_if",
-                                      "bundle_identifiers": [
-                                        "^com\\.googlecode\\.iterm2$",
-                                        "^com\\.github\\.atom$",
-                                        "^com\\.apple\\.dt\\.Xcode$"
-                                      ]
-                                  }
-                              ]
+                                "type": "basic"
                             },
                             {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.googlecode\\.iterm2$",
+                                            "^com\\.github\\.atom$",
+                                            "^com\\.apple\\.dt\\.Xcode$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "0",
                                     "modifiers": {
@@ -742,21 +752,225 @@
                                         "key_code": "0"
                                     }
                                 ],
-                                "type": "basic",
-                              "conditions": [
-                                  {
-                                      "type": "frontmost_application_if",
-                                      "bundle_identifiers": [
-                                        "^com\\.googlecode\\.iterm2$",
-                                        "^com\\.github\\.atom$",
-                                        "^com\\.apple\\.dt\\.Xcode$"
-                                      ]
-                                  }
-                              ]
+                                "type": "basic"
                             }
                         ]
-                  }
-              ]
+                    },
+                    {
+                        "description": "Use right_command+;/' to cycle through running applications (like command+tab).",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "quote",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "right_command"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "tab",
+                                        "modifiers": [
+                                            "left_command"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "semicolon",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "right_command"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "tab",
+                                        "modifiers": [
+                                            "left_command",
+                                            "left_shift"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Use right_command+;/' to cycle through running applications (like command+tab).",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "quote",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "right_command"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "tab",
+                                        "modifiers": [
+                                            "left_command"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "semicolon",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "right_command"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "tab",
+                                        "modifiers": [
+                                            "left_command",
+                                            "left_shift"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Use right_command+h/l to switch tabs in an application.",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "l",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "right_command"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "tab",
+                                        "modifiers": [
+                                            "left_control"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "h",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "right_command"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "tab",
+                                        "modifiers": [
+                                            "left_control",
+                                            "left_shift"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Use right_command+j/k to switch windows of the foreground application .",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "k",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "right_command"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "grave_accent_and_tilde",
+                                        "modifiers": [
+                                            "left_command"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "j",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "right_command"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "grave_accent_and_tilde",
+                                        "modifiers": [
+                                            "left_command",
+                                            "left_shift"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Disable left_command+(tab/shift+tab) (to retrain reflexes using the other manipulators).",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "tab",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "left_command"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "out"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "tab",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "left_command",
+                                            "left_shift"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "out"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    }
+                ]
             },
             "devices": [],
             "fn_function_keys": {

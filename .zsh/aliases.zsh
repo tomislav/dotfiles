@@ -1,6 +1,9 @@
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
 
+# ls replacement
+alias ls='exa'
+
 # Get week number
 alias week='date +%V'
 
