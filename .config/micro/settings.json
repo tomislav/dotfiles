@@ -6,14 +6,20 @@
     "colorscheme": "atom-dark-tc",
     "cursorline": true,
     "eofnewline": false,
+    "fastdirty": true,
+    "fileformat": "unix",
+    "ftoptions": true,
     "ignorecase": false,
     "indentchar": " ",
     "infobar": true,
+    "keepautoindent": false,
     "linter": true,
+    "mouse": true,
     "pluginchannels": [
         "https://raw.githubusercontent.com/micro-editor/plugin-channel/master/channel.json"
     ],
     "pluginrepos": [],
+    "rmtrailingws": false,
     "ruler": true,
     "savecursor": false,
     "saveundo": false,
@@ -24,6 +30,9 @@
     "splitRight": true,
     "statusline": true,
     "syntax": true,
+    "tabmovement": false,
     "tabsize": 4,
-    "tabstospaces": false
+    "tabstospaces": false,
+    "termtitle": false,
+    "useprimary": true
 }

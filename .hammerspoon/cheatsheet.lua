@@ -29,7 +29,7 @@ module.fgColor  = "#fff"
 module.alpha    = 0.85
 
 module.font     = "-apple-system"
-module.fontSize = 14
+module.fontSize = 15
 
 
 ------------------------------------------------------------------------
@@ -211,7 +211,7 @@ local generateHtml = function()
               <hr />
             </header>
             <div class="content maincontent">]]..myMenuItems..[[</div>
-          <script src="http://localhost:7734/isotope.pkgd.min.js"></script> 
+          <script src="http://localhost:7734/isotope.pkgd.min.js"></script>
           <script type="text/javascript">
             var elem = document.querySelector('.content');
             var iso = new Isotope( elem, {

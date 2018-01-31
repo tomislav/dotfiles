@@ -21,9 +21,22 @@ end
 
 function launchOrToggle(applicationName)
   return function()
-    local app = hs.appfinder.appFromName(applicationName)
+    local app = hs.application.find(applicationName)
     if not app or app:isHidden() then
         hs.application.launchOrFocus(applicationName)
+    elseif hs.application.frontmostApplication() ~= app then
+        app:activate()
+    else
+        app:hide()
+    end
+  end
+end
+
+function launchOrToggleByBundleId(bundleId)
+  return function()
+    local app = hs.application.find(bundleId)
+    if not app or app:isHidden() then
+        hs.application.launchOrFocusByBundleID(bundleId)
     elseif hs.application.frontmostApplication() ~= app then
         app:activate()
     else
