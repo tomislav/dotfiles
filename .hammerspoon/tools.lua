@@ -47,20 +47,20 @@ end
 
 lastToggledApplication = ''
 
-function launchOrCycleFocus(applicationName)
+function launchOrCycleFocus(bundleId)
   return function()
     local nextWindow = nil
     local targetWindow = nil
     local focusedWindow          = hs.window.focusedWindow()
-    local lastToggledApplication = focusedWindow and focusedWindow:application():title()
+    local lastToggledApplication = focusedWindow and focusedWindow:application():bundleID()
 
     if not focusedWindow then return nil end
 
-    if lastToggledApplication == applicationName then
-      nextWindow = getNextWindow(applicationName, focusedWindow)
+    if lastToggledApplication == bundleId then
+      nextWindow = getNextWindow(bundleId, focusedWindow)
       nextWindow:becomeMain()
     else
-      hs.application.launchOrFocus(applicationName)
+      hs.application.launchOrFocusByBundleID(bundleId)
     end
 
     if nextWindow then -- won't be available when appState empty
@@ -70,7 +70,7 @@ function launchOrCycleFocus(applicationName)
     end
 
     if not targetWindow then
-      -- dbgf('failed finding a window for application: %s', applicationName)
+      dbgf('failed finding a window for application: %s', applicationName)
       return nil
     end
   end
@@ -79,7 +79,7 @@ end
 
 function getNextWindow(windows, window)
   if type(windows) == "string" then
-    windows = hs.appfinder.appFromName(windows):allWindows()
+    windows = hs.application.find(windows):allWindows()
   end
 
   windows = filter(windows, hs.window.isStandard)

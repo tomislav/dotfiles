@@ -6,3 +6,5 @@ export LESS_TERMCAP_md="${yellow}";
 
 # Colorize ls
 export CLICOLOR=1
+
+export BAT_THEME=GitHub

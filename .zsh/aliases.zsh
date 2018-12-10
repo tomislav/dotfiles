@@ -1,9 +1,6 @@
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
 
-# ls replacement
-alias ls='exa'
-
 # Get week number
 alias week='date +%V'
 
@@ -11,7 +8,7 @@ alias week='date +%V'
 alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'
 
 # Get OS X Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
-alias update='mas upgrade; hr; brew update; hr; brew upgrade; hr; brew cleanup; hr; npm i -g npm; hr; npm update -g; hr; gem update --system; hr; gem update; hr; apm upgrade --no-confirm; hr; zplug update;'
+alias update='brew update; hr; brew upgrade; hr; brew cleanup; hr; npm i -g npm; hr; npm update -g; hr; gem update --system; hr; gem update; hr; zplug update;'
 
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
@@ -62,3 +59,6 @@ alias fl="caffeinate -i bundle exec fastlane"
 
 # dotfiles management
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
+# cat > bat
+alias cat='bat'

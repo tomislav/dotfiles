@@ -12,7 +12,18 @@ require 'localassets'
 require 'window'
 require 'focus'
 require 'battery'
-require 'cheatsheet'
+-- require 'cheatsheet'
 -- require 'spaces'
 require 'keybindings'
 require 'itunes'
+
+hs.loadSpoon("SpoonInstall")
+Install=spoon.SpoonInstall
+
+Install:andUse("UniversalArchive",
+{
+   config = {
+      archive_notifications = false
+   },
+   hotkeys = { archive = { { "ctrl", "cmd", "option" }, "a" } }
+})
