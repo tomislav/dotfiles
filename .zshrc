@@ -20,16 +20,16 @@ zplug "zsh-users/zsh-autosuggestions", defer:2
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 zplug "zsh-users/zsh-history-substring-search", defer:3
 
-# zplug "unixorn/warhol.plugin.zsh", from:github
-# zplug "mahori/zsh-grc", from:github
 zplug "peterhurford/git-aliases.zsh", from:github
 zplug "djui/alias-tips", from:github
 zplug "b4b4r07/enhancd", use:init.sh
 zplug "denysdovhan/spaceship-prompt", use:spaceship.zsh, from:github, as:theme
 zplug "pawel-slowik/zsh-term-title", from:github
 
-zplug "~/.zsh", from:local
 zplug "~/.fastlane/completions/", from:local, use:"*.zsh"
+zplug "/usr/local/etc/", from:local, use:"grc.zsh"
+zplug "/usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/", from:local, use:"*.zsh"
+zplug "~/.zsh", from:local
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
@@ -42,8 +42,6 @@ fi
 # Then, source plugins and add commands to $PATH
 zplug load
 
-[[ -s "/usr/local/etc/grc.zsh" ]] && source /usr/local/etc/grc.zsh
-
 __enhancd::filter::fuzzy() # redefine
 {
     if [[ -z $1 ]]; then
@@ -52,10 +50,3 @@ __enhancd::filter::fuzzy() # redefine
         fuzzydirfilter "$1"
     fi
 }
-
-# tabtab source for serverless package
-# uninstall by removing these lines or running `tabtab uninstall serverless`
-[[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
-# tabtab source for sls package
-# uninstall by removing these lines or running `tabtab uninstall sls`
-[[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
