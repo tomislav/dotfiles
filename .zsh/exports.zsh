@@ -8,3 +8,5 @@ export LESS_TERMCAP_md="${yellow}";
 export CLICOLOR=1
 
 export BAT_THEME=GitHub
+
+export ENHANCD_FILTER=fzy

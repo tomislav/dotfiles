@@ -15,7 +15,7 @@ require 'battery'
 -- require 'cheatsheet'
 -- require 'spaces'
 require 'keybindings'
-require 'itunes'
+-- require 'itunes'
 
 hs.loadSpoon("SpoonInstall")
 Install=spoon.SpoonInstall

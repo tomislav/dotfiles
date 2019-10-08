@@ -16,3 +16,11 @@ setopt prompt_subst           # dynamic prompt changes
 setopt combining_chars        # fixes for completion and UTF-8
 setopt no_list_beep           # no beep sound when complete list displayed
 setopt no_beep                # no beep on zle errors
+
+setopt auto_list # automatically list choices on ambiguous completion
+setopt auto_menu # automatically use menu completion
+setopt always_to_end # move cursor to end if word had one match
+
+zstyle ':completion:*' menu select # select completions with arrow keys
+zstyle ':completion:*' group-name '' # group results by category
+zstyle ':completion:::::' completer _expand _complete _ignored _approximate # enable approximate matches for completion
